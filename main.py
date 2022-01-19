@@ -10,8 +10,8 @@ def test():
     return 'Pinging Model Application!!'
 
 @app.route('/deploy', methods=['GET'])
-def test():
-    return 'Test connection git and heroku!!'
+def deployTest():
+    return 'Test connection git and herokut!!'
 
 @app.route('/predict', methods=['POST'])
 def predict():
