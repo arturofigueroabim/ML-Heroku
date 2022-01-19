@@ -9,6 +9,9 @@ app = Flask('app')
 def test():
     return 'Pinging Model Application!!'
 
+@app.route('/deploy', methods=['GET'])
+def test():
+    return 'Test connection git and heroku!!'
 
 @app.route('/predict', methods=['POST'])
 def predict():
