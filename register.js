@@ -2,8 +2,25 @@ const resgisterButton = document.getElementById('register');
 resgisterButton.addEventListener('click', printValues);
 
 
+
 function printValues(event) {
     event.preventDefault();
+    let germany = 0;
+    let india = 0;
+    let usa = 0
+
+    let originList = document.getElementById('origin');
+
+    var origin = originList.options[originList.selectedIndex].value;
+    console.log(origin);
+
+    if (origin == "germany") {
+        germany = 1
+    } else if (origin == "india") {
+        india = 1
+    } else if (origin == "usa") {
+        usa = 1
+    }
 
     const data = {
         cylinders: parseInt(document.getElementById('cylinders').value),
@@ -12,9 +29,9 @@ function printValues(event) {
         weight: parseInt(document.getElementById('weight').value),
         acceleration: parseInt(document.getElementById('acceleration').value),
         modelYear: parseInt(document.getElementById('modelYear').value),
-        germany: parseInt(document.getElementById('germany').value),
-        india: parseInt(document.getElementById('india').value),
-        usa: parseInt(document.getElementById('usa').value)
+        germany: germany,
+        india: india,
+        usa: usa
     };
 
     console.log(data);
