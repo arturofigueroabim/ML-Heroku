@@ -1,13 +1,17 @@
 import pickle
 import pandas as pd
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 
 ##creating a flask app and naming it "app"
 app = Flask('app')
+CORS(app)
 
 @app.route('/test', methods=['GET'])
 def test():
-    return 'Pinging Model Application!!'
+    response = jsonify({'Response': 'Pinging Model Application!!'})
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
 
 @app.route('/deploy', methods=['GET'])
 def deployTest():
@@ -28,7 +32,9 @@ def predict():
         'mpg_prediction': list(predictions)
     }
     
-    return jsonify(result)
+    response = jsonify(result)
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
 
 #Run local the app
 #if __name__ == '__main__':
