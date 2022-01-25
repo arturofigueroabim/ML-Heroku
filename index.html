@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script defer src="register.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid">
+            <h1 class="display-4">Auto MPG Prediction</h1>
+            <p class="lead">The Model predicts the MPG value for a vehicle, given that we have other attributes of that vehicle.</p>
+        </div>
+    <form action="#" method="post">
+
+        <div class="form-group">
+            <label for="userName"># Cylinders: </label>
+            <input class="form-control" type="number" name="Cylinders" id="cylinders">
+        </div>
+
+        <div class="form-group">
+        <label for="name">Displacement: </label>
+        <input class="form-control" type="number" name="Displacement" id="displacement">
+        </div>
+
+
+        <div class="form-group">
+        <label for="name">Horsepower: </label>
+        <input class="form-control" type="number" name="Horsepower" id="horsepower">
+        </div>
+
+        <div class="form-group">
+        <label for="name">Weight: </label>
+        <input class="form-control" type="number" name="Weight" id="weight">
+        </div>
+
+        
+        <div class="form-group">
+        <label for="name">Acceleration: </label>
+        <input class="form-control" type="number" name="Acceleration" id="acceleration">
+        </div>
+
+        <div class="form-group">
+        <label for="name">Model Year: </label>
+        <input class="form-control" type="number" name="ModelYear" id="modelYear">
+        </div>
+
+
+        <div class="form-group">
+        <label for="name">Germany: </label>
+        <input type="radio" id="germany" name="Germany" value="1">
+        </div>
+        
+        <div class="form-group">
+        <label for="name">India: </label>
+        <input type="radio" id="india" name="India" value="1">
+        </div>
+
+        <div class="form-group">
+        <label for="name">USA: </label>
+        <input type="radio" id="usa" name="USA" value="1">
+        </div>
+        
+        <input class="btn btn-primary" type="submit" value="register" id="register">
+    </form>
+
+</div>
+</body>
+</html>
