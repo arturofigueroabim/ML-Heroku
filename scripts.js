@@ -49,7 +49,7 @@ function printValues(event) {
         });
 
     response.then(function(result) {
-        window.alert("The Vehicle will consume: ", result.mpg_prediction, " MPG ")
+        window.alert(`The Vehicle will aprox consume: ${Math.round(result.mpg_prediction)} MPG`)
             //console.log(result.mpg_prediction)
     })
 }
