@@ -10,9 +10,7 @@ function printValues(event) {
     let usa = 0
 
     let originList = document.getElementById('origin');
-
     var origin = originList.options[originList.selectedIndex].value;
-    console.log(origin);
 
     if (origin == "germany") {
         germany = 1
@@ -34,8 +32,6 @@ function printValues(event) {
         usa: usa
     };
 
-    console.log(data);
-
     console.log('Calling service');
     let response = fetch('https://ml-keroku-app.herokuapp.com/predict', {
             headers: {
@@ -54,6 +50,6 @@ function printValues(event) {
 
     response.then(function(result) {
         window.alert(result.mpg_prediction)
-        console.log(result.mpg_prediction) // "Some User token"
+            //console.log(result.mpg_prediction)
     })
 }
