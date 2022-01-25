@@ -49,7 +49,7 @@ function printValues(event) {
         });
 
     response.then(function(result) {
-        window.alert(result.mpg_prediction)
+        window.alert("The Vehicle will consume: ", result.mpg_prediction, " MPG ")
             //console.log(result.mpg_prediction)
     })
 }
